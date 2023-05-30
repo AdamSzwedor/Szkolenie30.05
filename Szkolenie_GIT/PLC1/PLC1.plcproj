@@ -21,6 +21,9 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\ContactorNO.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\LedLamp.TcPOU">
       <SubType>Code</SubType>
     </Compile>
