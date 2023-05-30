@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="LedLamp" Id="{2e882cf5-3d00-4221-9a19-847a0714e3aa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK LedLamp
+VAR
+	output AT %Q* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Off" Id="{da7ba108-a618-4aa5-a0cf-d6e8d2016649}">
+      <Declaration><![CDATA[METHOD Off
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[output := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="On" Id="{e562fba0-efa2-4bb1-b9fe-3b9ec4fb4e2e}">
+      <Declaration><![CDATA[METHOD On
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[output := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
