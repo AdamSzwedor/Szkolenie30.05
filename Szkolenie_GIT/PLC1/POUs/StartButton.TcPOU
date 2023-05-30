@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="StartButton" Id="{dd361515-663c-4439-9f51-0e28f7d10fbb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK StartButton
+VAR
+	input AT %I* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="IsPressed" Id="{ba4ac2d0-4cee-427f-832b-c659027bb1fc}">
+      <Declaration><![CDATA[PROPERTY IsPressed : BOOL]]></Declaration>
+      <Get Name="Get" Id="{87fc14ca-c9eb-42f8-b230-dd552e6bba8e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IsPressed := input]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Property Name="IsReleased" Id="{7ded9d37-4e6b-4ad5-ab37-fcd95351a4ab}">
+      <Declaration><![CDATA[PROPERTY IsReleased : BOOL]]></Declaration>
+      <Get Name="Get" Id="{3d95c4d1-11fd-442c-99c3-518d80841ea8}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IsReleased := NOT input;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+  </POU>
+</TcPlcObject>
